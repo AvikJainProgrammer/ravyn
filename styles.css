@@ -16,6 +16,11 @@
     display: flex;
 }
 
-.header-container p {
-    margin: auto;
+.header-container h2 {
+    margin: auto    ;
+}
+
+.header-image {
+    max-width: 5vw; /* Limits width to 80% of viewport width */
+    height: auto; /* Maintains aspect ratio */
 }
