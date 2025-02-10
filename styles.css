@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 
+
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -20,7 +22,10 @@
     margin: auto    ;
 }
 
+.header-container h1 {
+    margin: auto;
+}
+
 .header-image {
-    max-width: 5vw; /* Limits width to 80% of viewport width */
-    height: auto; /* Maintains aspect ratio */
+    max-height: 80px;
 }
