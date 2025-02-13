@@ -1,179 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Bootstrap Webpage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
-        .logo {
-            height: 50px;
+      .logo {
+        height: 50px;
+      }
+
+      /* Navbar Styles */
+      .custom-nav {
+        background-color: #282a35;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0;
+      }
+
+      .custom-nav .nav-link {
+        color: white;
+        border-radius: 0;
+        padding: 10px 15px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+      }
+
+      .custom-nav .nav-link.active {
+        background-color: #de0f3f !important;
+        color: white !important;
+      }
+
+      .custom-nav .nav-link:hover {
+        background-color: #000000 !important;
+        color: white !important;
+      }
+
+      .custom-nav .dropdown-menu {
+        background-color: #282a35;
+        border: none;
+      }
+
+      .custom-nav .dropdown-item {
+        color: white;
+      }
+
+      .custom-nav .dropdown-item:hover {
+        background-color: #000000 !important;
+        color: white !important;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background: url("assets/images/readcherryblossom.jpg") no-repeat center
+          center/cover;
+        height: 100vh; /* Full height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        padding: 20px;
+      }
+
+      /* Light Overlay */
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8); /* White tint overlay */
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px; /* Restrict width */
+      }
+
+      .hero-heading {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: black; /* Change text color to black */
+      }
+
+      .hero-subheading {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: black; /* Change text color to black */
+      }
+
+      .hero-buttons .btn {
+        margin: 10px;
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+
+      .cards-section {
+        background-color: #f8f9fa; /* Light gray background */
+      }
+
+      /* Image Styling */
+      .card-img-custom {
+        width: 100%; /* Consistent width */
+        max-width: 250px; /* Prevents overly large images */
+        height: auto; /* Maintains aspect ratio */
+        padding: 10px; /* Adds spacing */
+        border-radius: 15px; /* Rounds corners */
+      }
+
+      /* Custom Button */
+      .custom-btn {
+        background-color: #de0f3f !important; /* Button color */
+        color: white !important;
+        border: none;
+        padding: 10px 15px;
+        transition: background 0.3s;
+      }
+
+      .custom-btn:hover {
+        background-color: #b00c30 !important; /* Darker shade on hover */
+      }
+
+      /* Left-Aligned Hero Section */
+      .left-hero-section {
+        background-color: #ffffff; /* White background */
+        padding: 80px 0;
+      }
+
+      /* Left Hero Title */
+      .left-hero-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: black;
+      }
+
+      /* Left Hero Subtitle */
+      .left-hero-subtitle {
+        font-size: 1.2rem;
+        color: #333;
+        max-width: 500px;
+      }
+
+      /* Left Hero Buttons */
+      .left-custom-btn {
+        background-color: #de0f3f !important;
+        color: white !important;
+        padding: 10px 20px;
+        border: none;
+        transition: background 0.3s;
+      }
+
+      .left-custom-btn:hover {
+        background-color: #b00c30 !important;
+      }
+
+      /* Left Hero Image */
+      .left-hero-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+      }
+
+      /* Mobile Adjustments */
+      @media (max-width: 768px) {
+        .left-hero-title {
+          font-size: 2rem;
         }
 
-        /* Navbar Styles */
-        .custom-nav {
-            background-color: #282A35;
-            min-height: 50px;
-            display: flex;
-            align-items: center;
-            padding: 0;
+        .left-hero-subtitle {
+          font-size: 1.2rem;
         }
 
-        .custom-nav .nav-link {
-            color: white;
-            border-radius: 0;
-            padding: 10px 15px;
-            height: 50px;
-            display: flex;
-            align-items: center;
+        .left-hero-buttons .btn {
+          font-size: 0.9rem;
+          padding: 10px 15px;
         }
 
-        .custom-nav .nav-link.active {
-            background-color: #DE0F3F !important;
-            color: white !important;
+        /* Stack text and image */
+        .left-hero-section .row {
+          text-align: center;
         }
+      }
 
-        .custom-nav .nav-link:hover {
-            background-color: #000000 !important;
-            color: white !important;
-        }
-
-        .custom-nav .dropdown-menu {
-            background-color: #282A35;
-            border: none;
-        }
-
-        .custom-nav .dropdown-item {
-            color: white;
-        }
-
-        .custom-nav .dropdown-item:hover {
-            background-color: #000000 !important;
-            color: white !important;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: url('assets/images/readcherryblossom.jpg') no-repeat center center/cover;
-            height: 100vh; /* Full height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            padding: 20px;
-        }
-
-        /* Light Overlay */
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.8); /* White tint overlay */
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 700px; /* Restrict width */
-        }
-
+      /* Mobile adjustments */
+      @media (max-width: 768px) {
         .hero-heading {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: black; /* Change text color to black */
+          font-size: 2rem;
         }
 
         .hero-subheading {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: black; /* Change text color to black */
+          font-size: 1.2rem;
         }
 
         .hero-buttons .btn {
-            margin: 10px;
-            padding: 12px 20px;
-            font-size: 1rem;
+          font-size: 0.9rem;
+          padding: 10px 15px;
+        }
+      }
+
+      /* Footer Styling */
+      .footer-section {
+        background-color: #282a35; /* Dark background */
+        color: white;
+        padding: 40px 0;
+      }
+
+      /* Footer Logo */
+      .footer-logo {
+        height: 50px; /* Matches the navbar logo */
+      }
+
+      /* Footer Links */
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .footer-links li {
+        display: inline;
+      }
+
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: #de0f3f; /* Matches your theme */
+      }
+
+      /* Social Media Icons */
+      .social-icon {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+
+      .social-icon:hover {
+        color: #de0f3f;
+      }
+
+      /* Footer Divider */
+      .footer-divider {
+        border-color: rgba(255, 255, 255, 0.2);
+        margin: 20px 0;
+      }
+
+      /* Footer Text */
+      .footer-text {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .footer-links {
+          flex-direction: column;
+          gap: 10px;
         }
 
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            .hero-heading {
-                font-size: 2rem;
-            }
-
-            .hero-subheading {
-                font-size: 1.2rem;
-            }
-
-            .hero-buttons .btn {
-                font-size: 0.9rem;
-                padding: 10px 15px;
-            }
+        .social-icon {
+          font-size: 1.3rem;
+          margin: 5px;
         }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-light py-2">
+      <div class="container d-flex align-items-center">
+        <img
+          src="assets\icons\ravynresizeddarkred.svg"
+          alt="Company Logo"
+          class="logo me-2"
+        />
+        <h1 class="h4 mb-0">Ravyn Technologies</h1>
+      </div>
+    </header>
 
-<!-- Header -->
-<header class="bg-light py-2">
-    <div class="container d-flex align-items-center">
-        <img src="logo.png" alt="Company Logo" class="logo me-2">
-        <h1 class="h4 mb-0">Company Name</h1>
-    </div>
-</header>
-
-<!-- Responsive Navigation Bar -->
-<nav class="navbar navbar-expand-lg custom-nav">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <!-- Responsive Navigation Bar -->
+    <nav class="navbar navbar-expand-lg custom-nav">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                       aria-expanded="false">Dropdown</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1 class="hero-heading">Welcome to Our Website</h1>
-        <p class="hero-subheading">We provide the best solutions to grow your business.</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-heading">Website under development</h1>
+        <p class="hero-subheading">
+          We provide the best solutions to grow your business.
+        </p>
         <div class="hero-buttons">
-            <a href="#" class="btn btn-primary">Get Started</a>
-            <a href="#" class="btn btn-outline-dark">Learn More</a>
-            <a href="#" class="btn btn-danger">Contact Us</a>
+          <a href="#" class="btn btn-primary">Get Started</a>
+          <a href="#" class="btn btn-outline-dark">Learn More</a>
+          <a href="#" class="btn btn-danger">Contact Us</a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- Card Section -->
+    <!-- Card Section -->
+    <section class="cards-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Service One</h5>
+                <img
+                  src="assets/images/readcherryblossom.jpg"
+                  class="card-img-custom mx-auto"
+                  alt="Service 1"
+                />
+                <p class="card-text">Description of the service goes here.</p>
+                <a href="#" class="btn custom-btn mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Service Two</h5>
+                <img
+                  src="image2.jpg"
+                  class="card-img-custom mx-auto"
+                  alt="Service 2"
+                />
+                <p class="card-text">Description of the service goes here.</p>
+                <a href="#" class="btn custom-btn mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Service Three</h5>
+                <img
+                  src="image3.jpg"
+                  class="card-img-custom mx-auto"
+                  alt="Service 3"
+                />
+                <p class="card-text">Description of the service goes here.</p>
+                <a href="#" class="btn custom-btn mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Service Four</h5>
+                <img
+                  src="image4.jpg"
+                  class="card-img-custom mx-auto"
+                  alt="Service 4"
+                />
+                <p class="card-text">Description of the service goes here.</p>
+                <a href="#" class="btn custom-btn mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Service Five</h5>
+                <img
+                  src="image5.jpg"
+                  class="card-img-custom mx-auto"
+                  alt="Service 5"
+                />
+                <p class="card-text">Description of the service goes here.</p>
+                <a href="#" class="btn custom-btn mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Left-Aligned Hero Section -->
+    <section class="left-hero-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Text Content -->
+          <div class="col-lg-6 text-lg-start">
+            <h1 class="left-hero-title">Empower Your Business</h1>
+            <p class="left-hero-subtitle">
+              Innovative solutions to take your business to the next level. Join
+              us today and experience excellence.
+            </p>
+            <div class="left-hero-buttons mt-4">
+              <a href="#" class="btn left-custom-btn">Get Started</a>
+              <a href="#" class="btn btn-outline-dark ms-2">Learn More</a>
+            </div>
+          </div>
+          <!-- Hero Image -->
+          <div class="col-lg-6 text-center mt-4 mt-lg-0">
+            <img
+              src="assets/images/hero-image.jpg"
+              class="left-hero-img img-fluid"
+              alt="Hero Image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Company Logo -->
+          <div class="col-md-4 text-center text-md-start">
+            <img
+              src="assets/images/logo.png"
+              alt="Company Logo"
+              class="footer-logo"
+            />
+          </div>
+          <!-- Footer Links -->
+          <div class="col-md-4 text-center">
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <!-- Social Media Icons -->
+          <div class="col-md-4 text-center text-md-end">
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <p class="text-center footer-text">
+          © 2024 Your Company. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
