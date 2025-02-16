@@ -1,0 +1,26 @@
+.cards-section {
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  /* Image Styling */
+  .card-img-custom {
+    width: 100%;          /* Consistent width */
+    max-width: 250px;     /* Prevents overly large images */
+    height: auto;         /* Maintains aspect ratio */
+    padding: 10px;        /* Adds spacing */
+    border-radius: 15px;  /* Rounds corners */
+  }
+  
+  /* Custom Button */
+  .custom-btn {
+    background-color: #de0f3f !important; /* Button color */
+    color: white !important;
+    border: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+  }
+  
+  .custom-btn:hover {
+    background-color: #b00c30 !important; /* Darker shade on hover */
+  }
+  

@@ -1,0 +1,41 @@
+/* Navbar Styles */
+.custom-nav {
+    background-color: #282a35;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .custom-nav .nav-link {
+    color: white;
+    padding: 10px 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-nav .nav-link.active {
+    background-color: #de0f3f !important;
+    color: white !important;
+  }
+  
+  .custom-nav .nav-link:hover {
+    background-color: #000000 !important;
+    color: white !important;
+  }
+  
+  .custom-nav .dropdown-menu {
+    background-color: #282a35;
+    border: none;
+  }
+  
+  .custom-nav .dropdown-item {
+    color: white;
+  }
+  
+  .custom-nav .dropdown-item:hover {
+    background-color: #000000 !important;
+    color: white !important;
+  }
+  
