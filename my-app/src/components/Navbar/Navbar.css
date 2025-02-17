@@ -1,41 +1,50 @@
 /* Navbar Styles */
+
+.navbar-toggler {
+  border-color: #de0f3f !important;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(88%) saturate(749%)
+    hue-rotate(329deg) brightness(94%) contrast(107%);
+}
+
 .custom-nav {
-    background-color: #282a35;
-    min-height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0;
-  }
-  
-  .custom-nav .nav-link {
-    color: white;
-    padding: 10px 15px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .custom-nav .nav-link.active {
-    background-color: #de0f3f !important;
-    color: white !important;
-  }
-  
-  .custom-nav .nav-link:hover {
-    background-color: #000000 !important;
-    color: white !important;
-  }
-  
-  .custom-nav .dropdown-menu {
-    background-color: #282a35;
-    border: none;
-  }
-  
-  .custom-nav .dropdown-item {
-    color: white;
-  }
-  
-  .custom-nav .dropdown-item:hover {
-    background-color: #000000 !important;
-    color: white !important;
-  }
-  
+  background-color: #282a35;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.custom-nav .nav-link {
+  color: white;
+  padding: 10px 15px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-nav .nav-link.active {
+  background-color: #de0f3f !important;
+  color: white !important;
+}
+
+.custom-nav .nav-link:hover {
+  background-color: #000000 !important;
+  color: white !important;
+}
+
+.custom-nav .dropdown-menu {
+  background-color: #282a35;
+  border: none;
+}
+
+.custom-nav .dropdown-item {
+  color: white;
+}
+
+.custom-nav .dropdown-item:hover {
+  background-color: #000000 !important;
+  color: white !important;
+}

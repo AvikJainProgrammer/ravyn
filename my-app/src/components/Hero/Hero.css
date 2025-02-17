@@ -1,47 +1,62 @@
 /* Hero Section */
 .hero-section {
-    height: 100vh; /* Full height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 20px;
-  }
-  
-  /* Light Overlay */
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* White tint overlay */
-  }
-  
-  /* Hero Content */
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 700px; /* Restrict width */
-  }
-  
+  height: 100vh; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+/* Light Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* White tint overlay */
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px; /* Restrict width */
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.hero-subheading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.hero-buttons .btn {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
   .hero-heading {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: black;
+    font-size: 2rem;
   }
-  
+
   .hero-subheading {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: black;
+    font-size: 1.2rem;
   }
-  
+
   .hero-buttons .btn {
-    margin: 10px;
-    padding: 12px 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 10px 15px;
   }
-  
+}
