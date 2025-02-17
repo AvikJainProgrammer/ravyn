@@ -4,9 +4,13 @@ import Header from "./components/Header/Header";
 import CustomNavbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
+import Home from './pages/Home/Home';
+
 import headerData from './data/headerData';
 import navbarData from './data/navbarData';
 import footerData from './data/footerData';
+
+
 
 function App() {
 
@@ -16,7 +20,7 @@ function App() {
       <CustomNavbar menuItems={navbarData.menuItems} />
       <main>
         <Routes>
-          <Route path="/" element={<div>Home</div>} />
+          <Route path="/" element={<Home/>} />
 
           
           <Route path="/about" element={<div>About</div>} />
