@@ -5,6 +5,8 @@ import CustomNavbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
 import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
 
 import headerData from './data/headerData';
 import navbarData from './data/navbarData';
@@ -23,9 +25,9 @@ function App() {
           <Route path="/" element={<Home/>} />
 
           
-          <Route path="/about" element={<div>About</div>} />
+          <Route path="/about" element={<About/>} />
           <Route path="/services" element={<div>Services</div>} />
-          <Route path="/contact" element={<div>Contact</div>} />
+          <Route path="/contact" element={<Contact/>} />
           <Route path="/privacy" element={<div>Privacy Policy</div>} />
 
           {/* Add more routes as needed */}

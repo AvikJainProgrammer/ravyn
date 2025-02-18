@@ -1,0 +1,11 @@
+.content-section {
+    margin-bottom: 50px;
+    padding-top: 50px; /* Provides some space when scrolling */
+  }
+  
+  .content-section__title {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #de0f3f;
+    padding-bottom: 10px;
+  }
+  

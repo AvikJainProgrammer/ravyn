@@ -1,0 +1,23 @@
+.scrollspy-sidebar {
+    position: sticky;
+    top: 100px;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .scrollspy-sidebar .nav-link {
+    color: #333;
+    padding: 5px 0;
+    transition: color 0.3s;
+  }
+  
+  .scrollspy-sidebar .nav-link:hover {
+    color: #de0f3f;
+  }
+  
+  .scrollspy-sidebar .active .nav-link,
+  .scrollspy-sidebar .active a {
+    font-weight: bold;
+    color: #de0f3f;
+  }
+  

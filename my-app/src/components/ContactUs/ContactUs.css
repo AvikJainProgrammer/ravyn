@@ -1,0 +1,32 @@
+.contact-us-section {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 60px 0;
+  }
+  
+  .contact-us-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-us-section form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Custom button styling */
+  .custom-btn {
+    background-color: #de0f3f !important;
+    border-color: #de0f3f !important;
+    color: #fff !important;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: #b00c30 !important;
+    border-color: #b00c30 !important;
+  }
+  
