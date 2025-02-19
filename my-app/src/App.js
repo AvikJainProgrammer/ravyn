@@ -7,6 +7,11 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import Services from './pages/Services/Services';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+
+import DataAutomation from './pages/Services/DataAutomation/DataAutomation';
+import CustomChatbot from './pages/Services/CustomChatbot/CustomChatbot';
 
 import headerData from './data/headerData';
 import navbarData from './data/navbarData';
@@ -26,9 +31,12 @@ function App() {
 
           
           <Route path="/about" element={<About/>} />
-          <Route path="/services" element={<div>Services</div>} />
+          <Route path="/services" element={<Services/>} />
           <Route path="/contact" element={<Contact/>} />
-          <Route path="/privacy" element={<div>Privacy Policy</div>} />
+          <Route path="/privacy" element={<PrivacyPolicy/>} />
+
+          <Route path="/data-automation" element={<DataAutomation/>} />
+          <Route path="/custom-chatbot" element={<CustomChatbot/>} />
 
           {/* Add more routes as needed */}
         </Routes>

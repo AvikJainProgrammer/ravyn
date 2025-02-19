@@ -6,7 +6,7 @@ const ContactUs = ({ companyEmail }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    countryCode: '+1', // default country code
+    countryCode: '+91', 
     phone: '',
     message: '',
   });
