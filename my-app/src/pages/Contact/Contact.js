@@ -1,13 +1,13 @@
 // src/pages/Contact/Contact.js
 
 import React from 'react';
-import ContactUs from '../../components/ContactUs/ContactUs';
+import SimpleContact from '../../components/SimpleContact/SimpleContact';
 import contactUsData from '../../data/contactUsData';
 
 const Contact = () => {
   return (
     <div>
-      <ContactUs companyEmail={contactUsData.email} />
+      <SimpleContact companyEmail={contactUsData.email} />
     </div>
   );
 };

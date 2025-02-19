@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ROUTES from '../../../constants/routes';
 
 const dataAutomationSections = [
     {
@@ -41,7 +42,7 @@ const dataAutomationSections = [
                     To help you gain actionable insights, we offer a dashboard service that visualizes the data stored in your data lake or warehouse. Our reporting tools allow you to monitor key performance indicators and track trends over time.
                 </p>
                 <p>
-                    <Link to="/reporting">Click here</Link> to access our reporting solutions.
+                    <Link to={ROUTES.SERVICES.DATA_VISUALIZATION}>Click here</Link> to access our reporting solutions.
                 </p>
             </div>
         ),

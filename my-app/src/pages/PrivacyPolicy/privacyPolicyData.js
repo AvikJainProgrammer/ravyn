@@ -81,7 +81,7 @@ const privacyPolicySections = [
         <div>
           <p>
             For any questions or concerns about our Privacy Policy, please reach out to us at{' '}
-            <a href="mailto:privacy@yourcompany.com">privacy@yourcompany.com</a>.
+            <a href="mailto:avikjain@ravyntech.com">avikjain@ravyntech.com</a>.
           </p>
         </div>
       ),

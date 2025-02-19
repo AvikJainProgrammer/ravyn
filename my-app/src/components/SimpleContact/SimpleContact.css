@@ -1,0 +1,15 @@
+.simple-contact-section {
+    background-color: #f8f9fa;
+    min-height: 60vh; /* Ensures the section takes up at least 60% of the viewport height */
+    padding: 2rem 0;
+  }
+  
+  .simple-contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  .simple-contact-section p {
+    font-size: 1.2rem;
+  }
+  

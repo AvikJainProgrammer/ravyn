@@ -1,4 +1,5 @@
 // src/pages/Home/homeData.js
+import ROUTES from "../../constants/routes";
 
 const homeData = {
     heroProps: {
@@ -17,7 +18,7 @@ const homeData = {
       subtitle:
         "Innovative solutions, precision engineering, and technology-driven results—Ravyn Technologies delivers cutting-edge manufacturing, AI solutions, and digital growth strategies to power your business forward. With a commitment to quality, efficiency, and reliability, we ensure that every solution meets the highest industry standards.",
       buttonText: "Let’s Discuss Your Project",
-      buttonLink: "/discuss-project", // React Router path for the button
+      buttonLink: ROUTES.CONTACT, // React Router path for the button
       imageSrc: "assets/images/trust.jpg",
       imageAlt: "Hero Image",
     }

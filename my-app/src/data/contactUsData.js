@@ -1,5 +1,5 @@
 const contactUsData = {
-    email: "avikjain@ravyntech.com"
+    email: "sales@ravyntech.com"
 };
 
 export default contactUsData;
